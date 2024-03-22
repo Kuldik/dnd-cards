@@ -3,22 +3,51 @@
   background: rgba(92, 135, 90, 0.583);
   border-radius: 5px;
   padding: 10px;
+  transition: all 0.3s ease;
+}
+.column:hover {
+  background: rgba(92, 135, 90, 0.313);
 }
 @media (max-width: 768px) {
   .column {
     width: 100%;
   }
 }
+.column .titleContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  padding-bottom: 0.5rem;
+}
+.column .titleContainer span {
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.column .titleContainer span:hover {
+  color: rgb(164, 219, 15);
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition-timing-function: ease-in-out;
+}
 .column .titleText {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   margin: 0;
   font-size: 1.25rem;
   font-weight: bold;
   border: none;
-  padding: 0.5rem;
   border-radius: 0.25rem;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
 }
 .column .cards {
   display: flex;

@@ -1,1 +1,1 @@
-{"version":3,"sources":["Card.module.sass","Card.module.css"],"names":[],"mappings":"AAAA;EACI,eAAA;EACA,sBAAA;EACA,aAAA;EACA,sBAAA;EACA,WAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EACA,YAAA;EACA,mBAAA;EACA,4CAAA;ACCJ;ADAI;EACI,gBAAA;ACER","file":"Card.module.css"}
+{"version":3,"sources":["Card.module.sass","Card.module.css"],"names":[],"mappings":"AAAA;EACI,eAAA;EACA,sBAAA;EACA,aAAA;EACA,sBAAA;EACA,WAAA;EACA,aAAA;EACA,mBAAA;EACA,WAAA;EACA,YAAA;EACA,YAAA;EACA,yBAAA;EACA,mBAAA;EACA,qCAAA;ACCJ;ADAI;EACI,gBAAA;ACER;ADDI;EACI,qCAAA;ACGR","file":"Card.module.css"}
