@@ -1,23 +1,22 @@
 .column {
   width: 100vh;
+  background: rgba(92, 135, 90, 0.583);
+  border-radius: 5px;
+  padding: 10px;
 }
-.column::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-.column::-webkit-scrollbar-thumb {
-  background-color: transparent;
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+  }
 }
 .column .titleText {
   margin: 0;
   font-size: 1.25rem;
   font-weight: bold;
-  border: 1px solid white;
+  border: none;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -27,10 +26,8 @@
   gap: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  border: 1px solid white;
-  height: 100%;
+  border: none;
   overflow: auto;
-  width: 100%;
   align-items: center;
   overflow: hidden;
 }/*# sourceMappingURL=Column.module.css.map */

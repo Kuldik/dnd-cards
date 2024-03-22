@@ -1,6 +1,4 @@
 .card {
-  border-bottom: 1px solid white;
-  width: 100%;
   padding: 0.5rem;
   border-radius: 0.25rem;
   display: flex;
@@ -8,4 +6,12 @@
   gap: 0.5rem;
   display: flex;
   align-items: center;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: rgba(25, 177, 197, 0.4470588235);
+}
+.card:last-child {
+  margin-bottom: 0;
 }/*# sourceMappingURL=Card.module.css.map */

@@ -5,10 +5,10 @@ function App() {
 
   return (
     <div className={styles.app}>
-     <Column title={"Нужно"}/>
-     <Column title={"В работе"}/>
-     <Column title={"Выполнено"}/>
-</div>
+     <Column title={"Нужно"} span={"+"}/>
+     <Column title={"В работе"} span={""} />
+     <Column title={"Выполнено"} span={""} />
+    </div>
   )
 }
 

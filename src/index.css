@@ -7,7 +7,7 @@
   max-width: 1200px;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: linear-gradient(to right, rgb(87, 112, 105), rgb(78, 51, 159), rgb(87, 112, 105));
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
