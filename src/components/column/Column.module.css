@@ -59,4 +59,16 @@
   overflow: auto;
   align-items: center;
   overflow: hidden;
+}
+.column .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.column .cardItem {
+  margin-bottom: 0.5rem;
+}
+.column .cardItem:last-child {
+  margin-bottom: 0;
 }/*# sourceMappingURL=Column.module.css.map */
