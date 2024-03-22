@@ -1,0 +1,6 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  padding: 2rem;
+}/*# sourceMappingURL=App.module.css.map */
