@@ -1,4 +1,10 @@
-.cardItem {
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.card .cardItem {
+  color: white;
   padding: 0.5rem;
   border-radius: 0.25rem;
   display: flex;
@@ -12,9 +18,9 @@
   margin-bottom: 10px;
   background: rgba(25, 177, 197, 0.447);
 }
-.cardItem:last-child {
+.card .cardItem:last-child {
   margin-bottom: 0;
 }
-.cardItem:hover {
+.card .cardItem:hover {
   background: rgba(25, 177, 197, 0.211);
 }/*# sourceMappingURL=Card.module.css.map */

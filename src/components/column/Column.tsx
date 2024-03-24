@@ -6,71 +6,36 @@ type ColumnProps = {
   title: string;
   modules: string;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  tasks: string[];
+  id: number;
 };
 
-export const Column: React.FC<ColumnProps> = ({ title, modules, setIsOpen }) => {
+export const Column: React.FC<ColumnProps> = ({ title, tasks, id, modules, setIsOpen }) => {
+  const droppableId = String(id); // Convert the id prop to a string
+
   return (
     <div className={styles.column}>
       <div className={styles.titleContainer}>
         <h1 className={styles.titleText}>{title} <span onClick={() => setIsOpen(true)} className={styles.modules}>{modules}</span></h1>
       </div>
       <div className={styles.wrapper}>
-  <Droppable droppableId="droppable">
-    {(provided) => (
-      <div {...provided.droppableProps} ref={provided.innerRef} className={styles.cardContainer}>
-        <Draggable draggableId="cardItem1" index={0}>
-          {(provided) => (
+        <div className="column">
+        <Droppable droppableId={droppableId}>
+          {(provided, snapshot) => (
             <div
-              className={styles.cardItem}
               ref={provided.innerRef}
-              {...provided.draggableProps}
-              {...provided.dragHandleProps}
+              {...provided.droppableProps}
+              isdraggingover={snapshot.isDraggingOver ? 'true' : undefined} // Pass undefined if the condition is false
             >
-              <Card />
+              {tasks && tasks.map((task, index) => (
+                <Card key={index} index={index} task={task} />
+              ))}
+              {provided.placeholder}
             </div>
           )}
-        </Draggable>
-        <Draggable draggableId="cardItem2" index={1}>
-          {(provided) => (
-            <div
-              className={styles.cardItem}
-              ref={provided.innerRef}
-              {...provided.draggableProps}
-              {...provided.dragHandleProps}
-            >
-              <Card />
-            </div>
-          )}
-        </Draggable>
-        <Draggable draggableId="cardItem3" index={2}>
-          {(provided) => (
-            <div
-              className={styles.cardItem}
-              ref={provided.innerRef}
-              {...provided.draggableProps}
-              {...provided.dragHandleProps}
-            >
-              <Card />
-            </div>
-          )}
-        </Draggable>
-        <Draggable draggableId="cardItem4" index={3}>
-          {(provided) => (
-            <div
-              className={styles.cardItem}
-              ref={provided.innerRef}
-              {...provided.draggableProps}
-              {...provided.dragHandleProps}
-            >
-              <Card />
-            </div>
-          )}
-        </Draggable>
-        {provided.placeholder}
+        </Droppable>
+        </div>
       </div>
-    )}
-  </Droppable>
-     </div>
     </div>
-  )
-}
+  );
+};
