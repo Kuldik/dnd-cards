@@ -1,6 +1,6 @@
 import styles from './Column.module.css'
 import { Card } from '../card/Card'
-import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd'
+import {Droppable, Draggable} from 'react-beautiful-dnd'
 
 type ColumnProps = {
   title: string;
@@ -15,7 +15,6 @@ export const Column: React.FC<ColumnProps> = ({ title, modules, setIsOpen }) => 
         <h1 className={styles.titleText}>{title} <span onClick={() => setIsOpen(true)} className={styles.modules}>{modules}</span></h1>
       </div>
       <div className={styles.wrapper}>
-      <DragDropContext>
   <Droppable droppableId="droppable">
     {(provided) => (
       <div {...provided.droppableProps} ref={provided.innerRef} className={styles.cardContainer}>
@@ -71,7 +70,6 @@ export const Column: React.FC<ColumnProps> = ({ title, modules, setIsOpen }) => 
       </div>
     )}
   </Droppable>
-</DragDropContext>
      </div>
     </div>
   )
