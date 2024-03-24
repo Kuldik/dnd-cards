@@ -4,6 +4,8 @@ export interface ITask {
     id?: string
     task?: string
     index?: number
+    inProcess?: boolean
+    updatedTask?: boolean
 }
 
 export interface ITaskData extends Omit<ITask, 'id'> {
